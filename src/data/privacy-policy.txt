@@ -1,0 +1,61 @@
+Privacy Policy (FoodScroll)
+
+1. Information We Collect:
+
+User-Provided Information:
+Account information (name, email, profile picture).
+Content you post (photos, reviews, location data).
+Friend connections and interactions.
+Automatically Collected Information:
+Device information (device type, operating system).
+Usage data (app usage, interactions).
+Location data (with your consent).
+Cookies and Tracking Technologies:
+We may use cookies and similar technologies to collect information about your use of the App.
+2. How We Use Your Information:
+
+To provide and improve the App.
+To personalize your experience.
+To connect you with other users.
+To send you notifications and updates.
+To analyze App usage and trends.
+To prevent fraud and abuse.
+To comply with legal obligations.
+3. Sharing Your Information:
+
+With Other Users:
+Your public profile and posts will be visible to other users.
+Your friend connections will be visible to your friends.
+With Third-Party Service Providers:
+We may share information with third-party service providers who assist us in operating the App (e.g., hosting, analytics).
+For Legal Reasons:
+We may share information if required by law or to protect our rights.
+Business Transfers:
+In the event of a merger or acquisition, your information may be transferred to the new owner.
+4. Data Security:
+
+We take reasonable measures to protect your information from unauthorized access, use, or disclosure.
+However, no method of transmission over the internet or electronic storage is completely secure.   
+5. Your Choices:
+
+You can control your privacy settings within the App.
+You can access, modify, or delete your account information.
+You can opt out of receiving promotional emails.
+You can disable location sharing.
+6. Children's Privacy:
+
+FoodScroll is not intended for children under the age of 13.
+We do not knowingly collect personal information from children under 13.
+If we become aware that we have collected personal information from a child under 13, we will take steps to delete it.   
+7. Changes to Privacy Policy:
+
+We may update this Privacy Policy from time to time.
+We will notify you of any changes through the App or by email.   
+8. Contact Us:
+
+If you have any questions or concerns about this Privacy Policy, please contact us at [Your Contact Information].   
+Important Notes:
+
+Legal Counsel: It is highly recommended that you consult with a legal professional to ensure that these Terms and Privacy Policy comply with all applicable laws and regulations in your jurisdiction.
+Specific Jurisdictions: Laws vary significantly by location. Consider adding details or clauses that are specific to your target user base.
+Regular Review: Policies should be reviewed and updated regularly to reflect changes in laws, technology, and your business practices.

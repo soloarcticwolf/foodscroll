@@ -1,0 +1,2 @@
+:: LIST OF Dynamic Items
+1. Auth image

@@ -1,14 +1,13 @@
 'use client'
-import { Button } from '@/components/ui/button'
+import { LoginForm } from '@/components/login-form'
 import { NextPage } from 'next'
 
 const Page: NextPage = () => {
-  function handleButton() {
-    console.log('clicked onme')
-  }
   return (
-    <div>
-      <Button onClick={handleButton}>Click me</Button>
+    <div className="flex min-h-svh flex-col items-center justify-center bg-muted p-6 md:p-10">
+      <div className="w-full max-w-sm md:max-w-3xl">
+        <LoginForm />
+      </div>
     </div>
   )
 }

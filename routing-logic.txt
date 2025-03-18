@@ -1,0 +1,3 @@
+first go to the default page it localhost:3000, the page checks if there is an active session
+  if session is present, then redirects to the /home page, 
+  else redirect to the /auth page
