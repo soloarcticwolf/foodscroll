@@ -1,8 +1,10 @@
 import { AppSidebar } from '@/components/app-sidebar'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { Separator } from '@radix-ui/react-separator'
+import { getServerSession } from 'next-auth'
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession()
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -15,6 +17,7 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           {/* :: Add content here */}
+          <div>{JSON.stringify(session)}</div>
         </div>
       </SidebarInset>
     </SidebarProvider>

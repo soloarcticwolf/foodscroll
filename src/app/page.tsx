@@ -1,16 +1,12 @@
-import { LINK_HOME, LINK_SIGNUP } from '@/constant/link'
+import { LINK_AUTH, LINK_HOME } from '@/constant/link'
+import { NextPage } from 'next'
+import { getSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
 
-export function redirectToDestination() {
-  const session = null
-
-  if (!session) return redirect(LINK_SIGNUP)
+const Page: NextPage = async () => {
+  const session = await getSession()
+  if (!session) return redirect(LINK_AUTH)
   redirect(LINK_HOME)
-}
-
-const Page = () => {
-  redirectToDestination()
-  return null
 }
 
 export default Page

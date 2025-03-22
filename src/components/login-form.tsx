@@ -1,3 +1,5 @@
+'use client'
+import { appCredentialSignin } from '@/app/auth/helper'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -5,16 +7,11 @@ import { Label } from '@/components/ui/label'
 import { LINK_HOME } from '@/constant/link'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import { redirect } from 'next/navigation'
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<'div'>) {
-  function handleLogin() {
-    return redirect(LINK_HOME)
-  }
-
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props}>
       <Card className="overflow-hidden p-0">
@@ -48,7 +45,11 @@ export function LoginForm({
                 </div>
                 <Input id="password" type="password" required />
               </div>
-              <Button type="submit" className="w-full" onClick={handleLogin}>
+              <Button
+                type="submit"
+                className="w-full"
+                onClick={() => appCredentialSignin(LINK_HOME)}
+              >
                 Login
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">

@@ -18,6 +18,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
+import { LINK_AUTH } from '@/constant/link'
+import { signOut } from 'next-auth/react'
 
 export function NavUser({
   user,
@@ -68,14 +70,7 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
-            {/* <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Sparkles />
-                Upgrade to Pro
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator /> */}
+
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <BadgeCheck />
@@ -85,13 +80,11 @@ export function NavUser({
                 <Settings />
                 Settings
               </DropdownMenuItem>
-              {/* <DropdownMenuItem>
-                <Bell />
-                Notifications
-              </DropdownMenuItem> */}
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => signOut({ callbackUrl: LINK_AUTH })}
+            >
               <LogOut />
               Log out
             </DropdownMenuItem>

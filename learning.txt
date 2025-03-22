@@ -1,0 +1,13 @@
+AUTH:
+getServerSession: Usable only on server returns the getServerSession
+getSession: usable on client side, check MEMORY for active session, if not available returns null
+useSession: client side, for checking inside components.
+
+Next JS User object:
+NextAuth.js expects the User object returned from the authorize function to have specific properties that it then uses to populate the session.
+By default, NextAuth.js primarily uses the id, name, email, and image properties.
+Any additional properties you return (like surname in your case) are not automatically included in the session unless you explicitly handle them in the jwt and session callbacks.
+
+Callbacks needs to be called sequentially
+JWT cb user contains the actual authenticated user object returned from authorize fn, set those values to token
+Access these available token values in session cb, set these values to new session and return this session
