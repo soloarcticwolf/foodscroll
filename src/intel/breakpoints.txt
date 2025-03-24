@@ -1,0 +1,21 @@
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
+Breakpoint 1024:
+post width: 576px
+
