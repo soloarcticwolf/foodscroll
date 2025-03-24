@@ -11,6 +11,13 @@ import { Heart, MessageCircle, MoreHorizontal, Send, Smile } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import { TypePost } from './post.type'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from './ui/carousel'
 
 const Post: React.FC<{ post: TypePost }> = ({ post }) => {
   const [liked, setLiked] = React.useState(false)
@@ -68,13 +75,40 @@ const Post: React.FC<{ post: TypePost }> = ({ post }) => {
         </CardHeader>
 
         <CardContent className="p-0">
-          <Image
-            src={post.imageUrl}
-            alt={`Post by ${post.user.name}`}
-            className="w-full aspect-square object-cover rounded-t-lg"
-            height={500}
-            width={500}
-          />
+          <Carousel>
+            <CarouselContent>
+              <CarouselItem>
+                <Image
+                  src={post.imageUrl}
+                  alt={`Post by ${post.user.name}`}
+                  className="w-full aspect-square object-cover rounded-t-lg"
+                  height={500}
+                  width={500}
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src={post.imageUrl}
+                  alt={`Post by ${post.user.name}`}
+                  className="w-full aspect-square object-cover rounded-t-lg"
+                  height={500}
+                  width={500}
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src={post.imageUrl}
+                  alt={`Post by ${post.user.name}`}
+                  className="w-full aspect-square object-cover rounded-t-lg"
+                  height={500}
+                  width={500}
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+
           <div className="p-4">
             <div className="flex items-center justify-between my-2">
               <div className="flex items-center space-x-4">

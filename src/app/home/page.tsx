@@ -5,12 +5,13 @@ import ChatBox from '@/components/chat-box'
 import { TypeChatUser } from '@/components/chat.type'
 import ChatSidebar from '@/components/chatbar'
 import Post from '@/components/post'
+import SearchBar from '@/components/ui/search'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { examplePost, users } from '@/data/dummy-data'
-import { Separator } from '@radix-ui/react-separator'
 import { useState } from 'react'
 
 export default function Page() {
+  const [searchText, setSearchText] = useState('')
   const [selectedUser, setSelectedUser] = useState<TypeChatUser | null>(null)
 
   const handleUserClick = (user: TypeChatUser) => {
@@ -25,25 +26,30 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <div className="masterContentContainer flex ">
-          <div className="leftContent flex justify-around w-full">
-            <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-              <div className="flex items-center gap-2 px-4">
-                <Separator orientation="vertical" className="mr-2 h-4" />
+        <div className="masterContentContainer flex border-2 border-green-600">
+          <div className="leftContent flex justify-around flex-col border-2 border-blue-600 ">
+            <div className="flex-1"></div>
+            <header className="flex h-16 shrink-0 border-b-2 mb-6 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+              <div className="m-auto w-[600px] px-4">
                 {/* :: Add search here */}
+                <SearchBar
+                  searchText={searchText}
+                  searchAction={setSearchText}
+                />
               </div>
             </header>
-            <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+            <div className="p-4 flex justify-center border-2 border-red-600">
               {/* :: Add content here */}
-              <div className="postContainer m-auto grid gap-4 w-[600px]">
+              <div className="postContainer grid gap-4 w-[600px]">
                 <Post post={examplePost} />
                 <Post post={examplePost} />
               </div>
             </div>
-            <div className={`visuallyHidden w-64`} />
           </div>
-          <div className="rightContent h-screen fixed right-0">
-            <div className={`chatSideBar h-full w-64 border-l-2`}>
+          <div className="rightContent h-screen">
+            <div
+              className={`chatSideBar h-screen w-64 border-2 border-red-600 right-0 relative`}
+            >
               {/* :: Add chat sidebar here */}
               <div className="flex relative">
                 <ChatSidebar users={users} onUserClick={handleUserClick} />
